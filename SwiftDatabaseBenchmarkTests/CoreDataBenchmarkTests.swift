@@ -10,7 +10,7 @@ import XCTest
 import CoreData
 @testable import SwiftDatabaseBenchmark
 
-class SwiftDatabaseBenchmarkTests: XCTestCase {
+class CoreDataBenchmarkTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
