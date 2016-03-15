@@ -15,9 +15,24 @@ class RealmBenchmarkTests: XCTestCase {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
+        let path = "\(RealmBenchmarkTests.documentsDirectory)/message.realm"
+        let configuration = Realm.Configuration(
+            path: path,
+            schemaVersion: 0,
+            migrationBlock: { (migration, oldSchemaVersion) -> Void in
+                
+            },
+            objectTypes: [
+                RLMMessage.self
+            ]
+        )
+        
+        self.realm = try! Realm(configuration: configuration)
+
+        
         try! self.realm.write {
             
-            for i in 1...100000 {
+            for i in 1...Consts.total {
                 autoreleasepool {
                     self.insertNewMessage(timeIntervalSince1970: NSTimeInterval(i))
                 }
@@ -33,32 +48,36 @@ class RealmBenchmarkTests: XCTestCase {
         super.tearDown()
     }
     
-    func testPerformance() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//    func testGetObjects() {
+//        // This is an example of a functional test case.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//
+//        self.measureBlock {
+//           _ = self.realm.objects(RLMMessage).sorted("identifierDate")
+//        }
+//    }
+//
+//    
+//    func testGetFirst() {
+//        
+//        let messages = self.realm.objects(RLMMessage).sorted("identifierDate")
+//        self.measureBlock {
+//            _ = messages.first
+//        }
+//    }
+//    
+//    
+    func testAll() {
         
-        self.measureBlock { 
+        self.measureBlock {
             let messages = self.realm.objects(RLMMessage).sorted("identifierDate")
+//            let messages = self.realm.objects(RLMMessage).filter("removed == false").sorted("identifierDate")
             _ = messages.first
         }
     }
+
     
-    
-    private var realm: Realm = {
-        let path = "\(documentsDirectory)/message.realm"
-        let configuration = Realm.Configuration(
-            path: path,
-            schemaVersion: 0,
-            migrationBlock: { (migration, oldSchemaVersion) -> Void in
-                
-            },
-            objectTypes: [
-                RLMMessage.self
-            ]
-        )
-        
-        return try! Realm(configuration: configuration)
-    }()
+    private var realm: Realm!
     
     private static let documentsDirectory = NSSearchPathForDirectoriesInDomains(.DocumentDirectory, .UserDomainMask, true)[0]
     

@@ -12,12 +12,14 @@ import CoreData
 
 class CoreDataBenchmarkTests: XCTestCase {
     
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
         
         let context = self.context
-        for i in 1...100000 {
+
+        for i in 1...Consts.total {
             self.insertNewMessage(context, timeIntervalSince1970: NSTimeInterval(i))
         }
         
@@ -33,31 +35,70 @@ class CoreDataBenchmarkTests: XCTestCase {
         super.tearDown()
     }
     
-    func testPerformance() {
+//    func testPerformFetch() {
+//        // This is an example of a functional test case.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//      
+//        
+//        let context = self.context
+//        let request = NSFetchRequest(entityName: "Message")
+//        request.sortDescriptors = [NSSortDescriptor(key: "identifier", ascending: true)]
+//        
+//        let fetchedRequestController = NSFetchedResultsController(
+//            fetchRequest: request,
+//            managedObjectContext: context,
+//            sectionNameKeyPath: nil,
+//            cacheName: nil)
+//
+//        self.measureBlock {
+//            try! fetchedRequestController.performFetch()
+//        }
+//    }
+//
+//    func testGetFirst() {
+//        // This is an example of a functional test case.
+//        // Use XCTAssert and related functions to verify your tests produce the correct results.
+//        
+//        let context = self.context
+//        let request = NSFetchRequest(entityName: "Message")
+//        request.sortDescriptors = [NSSortDescriptor(key: "identifier", ascending: true)]
+//        
+//        let fetchedRequestController = NSFetchedResultsController(
+//            fetchRequest: request,
+//            managedObjectContext: context,
+//            sectionNameKeyPath: nil,
+//            cacheName: nil)
+//
+//        try! fetchedRequestController.performFetch()
+//
+//        self.measureBlock {
+//            fetchedRequestController.fetchedObjects?.first
+//        }
+//    }
+//    
+//    
+    func testAll() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
-      
+        
+        let context = self.context
+        let request = NSFetchRequest(entityName: "Message")
+//        request.predicate = NSPredicate(format: "SELF.removed == %@", false)
+        request.sortDescriptors = [NSSortDescriptor(key: "identifierDate", ascending: true)]
+        
+        let fetchedRequestController = NSFetchedResultsController(
+            fetchRequest: request,
+            managedObjectContext: context,
+            sectionNameKeyPath: nil,
+            cacheName: nil)
+        
         self.measureBlock {
-            
-            let context = self.context
-            let request = NSFetchRequest(entityName: "Message")
-            request.sortDescriptors = [NSSortDescriptor(key: "identifier", ascending: true)]
-            
-            let fetchedRequestController = NSFetchedResultsController(
-                fetchRequest: request,
-                managedObjectContext: context,
-                sectionNameKeyPath: nil,
-                cacheName: nil)
-            do {
-                try fetchedRequestController.performFetch()
-                fetchedRequestController.fetchedObjects?.first
-                
-            }
-            catch (let error) {
-                XCTFail("error : \(error)")
-            }
+            try! fetchedRequestController.performFetch()
+            let messages = fetchedRequestController.fetchedObjects
+            _ = messages?.first
         }
     }
+    
     
     private let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
@@ -67,15 +108,13 @@ class CoreDataBenchmarkTests: XCTestCase {
     
     private func insertNewMessage(context: NSManagedObjectContext, timeIntervalSince1970: NSTimeInterval) {
         
-        guard let message = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: context) as? Message else {
-            return
-        }
+        let object = NSEntityDescription.insertNewObjectForEntityForName("Message", inManagedObjectContext: context)
         
         let date = NSDate(timeIntervalSince1970: timeIntervalSince1970)
-        message.identifier = NSNumber(longLong: Int64(timeIntervalSince1970))
-        message.identifierDate = date
-        message.text = "\(timeIntervalSince1970)"
-        message.removed = timeIntervalSince1970 % 2 == 0
+        object.setValue(NSNumber(longLong: Int64(timeIntervalSince1970)), forKey: "identifier")
+        object.setValue(date, forKey: "identifierDate")
+        object.setValue("\(timeIntervalSince1970)", forKey: "text")
+        object.setValue(timeIntervalSince1970 % 2 == 0, forKey: "removed")
     }
     
 }

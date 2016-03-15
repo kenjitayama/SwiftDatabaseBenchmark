@@ -19,6 +19,7 @@
 		7C4A9D8A1C96C9700074B032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A9D891C96C9700074B032 /* Assets.xcassets */; };
 		7C4A9D8D1C96C9700074B032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A9D8B1C96C9700074B032 /* LaunchScreen.storyboard */; };
 		7C4A9D981C96C9700074B032 /* CoreDataBenchmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9D971C96C9700074B032 /* CoreDataBenchmarkTests.swift */; };
+		7C7C86651C97E5DB008240D3 /* Consts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7C86641C97E5DB008240D3 /* Consts.swift */; };
 		7CBA9AE61C96DD2600D44808 /* RLMMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA9AE51C96DD2600D44808 /* RLMMessage.swift */; };
 		7CBA9AE71C96DD2600D44808 /* RLMMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA9AE51C96DD2600D44808 /* RLMMessage.swift */; };
 		7CC0E57B1C96D9DA003B0F50 /* RealmBenchmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0E57A1C96D9DA003B0F50 /* RealmBenchmarkTests.swift */; };
@@ -52,6 +53,7 @@
 		7C4A9D931C96C9700074B032 /* SwiftDatabaseBenchmarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDatabaseBenchmarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4A9D971C96C9700074B032 /* CoreDataBenchmarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBenchmarkTests.swift; sourceTree = "<group>"; };
 		7C4A9D991C96C9700074B032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7C7C86641C97E5DB008240D3 /* Consts.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Consts.swift; sourceTree = "<group>"; };
 		7CBA9AE51C96DD2600D44808 /* RLMMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMMessage.swift; sourceTree = "<group>"; };
 		7CC0E57A1C96D9DA003B0F50 /* RealmBenchmarkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmBenchmarkTests.swift; sourceTree = "<group>"; };
 		7F12DE1833D72974393D8A52 /* Pods-SwiftDatabaseBenchmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDatabaseBenchmark.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDatabaseBenchmark/Pods-SwiftDatabaseBenchmark.release.xcconfig"; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				7C4A9D971C96C9700074B032 /* CoreDataBenchmarkTests.swift */,
 				7C4A9D991C96C9700074B032 /* Info.plist */,
 				7CC0E57A1C96D9DA003B0F50 /* RealmBenchmarkTests.swift */,
+				7C7C86641C97E5DB008240D3 /* Consts.swift */,
 			);
 			path = SwiftDatabaseBenchmarkTests;
 			sourceTree = "<group>";
@@ -376,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7CBA9AE71C96DD2600D44808 /* RLMMessage.swift in Sources */,
+				7C7C86651C97E5DB008240D3 /* Consts.swift in Sources */,
 				7C4A9D981C96C9700074B032 /* CoreDataBenchmarkTests.swift in Sources */,
 				7C28191E1C97A63E00F1133D /* Message.swift in Sources */,
 				7C28191C1C97A63E00F1133D /* Message+CoreDataProperties.swift in Sources */,
@@ -513,6 +517,7 @@
 			baseConfigurationReference = 7F12DE1833D72974393D8A52 /* Pods-SwiftDatabaseBenchmark.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ENABLE_TESTABILITY = YES;
 				INFOPLIST_FILE = SwiftDatabaseBenchmark/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.kenjitayama.SwiftDatabaseBenchmark;
