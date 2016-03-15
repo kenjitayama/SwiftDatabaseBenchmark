@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		48E73D22948F35928DCD77C7 /* Pods_SwiftDatabaseBenchmarkTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 164B88A866D94FC0822A522A /* Pods_SwiftDatabaseBenchmarkTests.framework */; };
+		7C28191B1C97A63E00F1133D /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2819191C97A63E00F1133D /* Message+CoreDataProperties.swift */; };
+		7C28191C1C97A63E00F1133D /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C2819191C97A63E00F1133D /* Message+CoreDataProperties.swift */; };
+		7C28191D1C97A63E00F1133D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C28191A1C97A63E00F1133D /* Message.swift */; };
+		7C28191E1C97A63E00F1133D /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C28191A1C97A63E00F1133D /* Message.swift */; };
 		7C4A9D801C96C9700074B032 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9D7F1C96C9700074B032 /* AppDelegate.swift */; };
 		7C4A9D821C96C9700074B032 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9D811C96C9700074B032 /* ViewController.swift */; };
 		7C4A9D851C96C9700074B032 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A9D831C96C9700074B032 /* Main.storyboard */; };
@@ -14,10 +19,9 @@
 		7C4A9D8A1C96C9700074B032 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A9D891C96C9700074B032 /* Assets.xcassets */; };
 		7C4A9D8D1C96C9700074B032 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7C4A9D8B1C96C9700074B032 /* LaunchScreen.storyboard */; };
 		7C4A9D981C96C9700074B032 /* CoreDataBenchmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9D971C96C9700074B032 /* CoreDataBenchmarkTests.swift */; };
-		7C4A9DA51C96CCB50074B032 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9DA31C96CCB50074B032 /* Message+CoreDataProperties.swift */; };
-		7C4A9DA61C96CCB50074B032 /* Message+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9DA31C96CCB50074B032 /* Message+CoreDataProperties.swift */; };
-		7C4A9DA71C96CCB50074B032 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9DA41C96CCB50074B032 /* Message.swift */; };
-		7C4A9DA81C96CCB50074B032 /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C4A9DA41C96CCB50074B032 /* Message.swift */; };
+		7CBA9AE61C96DD2600D44808 /* RLMMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA9AE51C96DD2600D44808 /* RLMMessage.swift */; };
+		7CBA9AE71C96DD2600D44808 /* RLMMessage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CBA9AE51C96DD2600D44808 /* RLMMessage.swift */; };
+		7CC0E57B1C96D9DA003B0F50 /* RealmBenchmarkTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CC0E57A1C96D9DA003B0F50 /* RealmBenchmarkTests.swift */; };
 		D2C90FD8D05A4CAA4CDE719D /* Pods_SwiftDatabaseBenchmark.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7B7B85F1EAED584C2CC1FCF1 /* Pods_SwiftDatabaseBenchmark.framework */; };
 /* End PBXBuildFile section */
 
@@ -32,8 +36,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		164B88A866D94FC0822A522A /* Pods_SwiftDatabaseBenchmarkTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDatabaseBenchmarkTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FFE12134493F368F72D71F9 /* Pods-SwiftDatabaseBenchmark.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDatabaseBenchmark.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDatabaseBenchmark/Pods-SwiftDatabaseBenchmark.debug.xcconfig"; sourceTree = "<group>"; };
 		7B7B85F1EAED584C2CC1FCF1 /* Pods_SwiftDatabaseBenchmark.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftDatabaseBenchmark.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7C2819191C97A63E00F1133D /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7C28191A1C97A63E00F1133D /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
 		7C4A9D7C1C96C96F0074B032 /* SwiftDatabaseBenchmark.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDatabaseBenchmark.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4A9D7F1C96C9700074B032 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7C4A9D811C96C9700074B032 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -45,9 +52,11 @@
 		7C4A9D931C96C9700074B032 /* SwiftDatabaseBenchmarkTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftDatabaseBenchmarkTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		7C4A9D971C96C9700074B032 /* CoreDataBenchmarkTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataBenchmarkTests.swift; sourceTree = "<group>"; };
 		7C4A9D991C96C9700074B032 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		7C4A9DA31C96CCB50074B032 /* Message+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Message+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7C4A9DA41C96CCB50074B032 /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		7CBA9AE51C96DD2600D44808 /* RLMMessage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RLMMessage.swift; sourceTree = "<group>"; };
+		7CC0E57A1C96D9DA003B0F50 /* RealmBenchmarkTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmBenchmarkTests.swift; sourceTree = "<group>"; };
 		7F12DE1833D72974393D8A52 /* Pods-SwiftDatabaseBenchmark.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDatabaseBenchmark.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDatabaseBenchmark/Pods-SwiftDatabaseBenchmark.release.xcconfig"; sourceTree = "<group>"; };
+		A87DA71AA58BCD7C7CB52DFB /* Pods-SwiftDatabaseBenchmarkTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDatabaseBenchmarkTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDatabaseBenchmarkTests/Pods-SwiftDatabaseBenchmarkTests.debug.xcconfig"; sourceTree = "<group>"; };
+		CA20B2624D2EBE6CB323E411 /* Pods-SwiftDatabaseBenchmarkTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftDatabaseBenchmarkTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftDatabaseBenchmarkTests/Pods-SwiftDatabaseBenchmarkTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +72,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48E73D22948F35928DCD77C7 /* Pods_SwiftDatabaseBenchmarkTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -92,6 +102,7 @@
 		7C4A9D7E1C96C9700074B032 /* SwiftDatabaseBenchmark */ = {
 			isa = PBXGroup;
 			children = (
+				7CBA9AE41C96DD0B00D44808 /* Realm */,
 				7C4A9DA21C96CC850074B032 /* CoreData */,
 				7C4A9D7F1C96C9700074B032 /* AppDelegate.swift */,
 				7C4A9D811C96C9700074B032 /* ViewController.swift */,
@@ -109,6 +120,7 @@
 			children = (
 				7C4A9D971C96C9700074B032 /* CoreDataBenchmarkTests.swift */,
 				7C4A9D991C96C9700074B032 /* Info.plist */,
+				7CC0E57A1C96D9DA003B0F50 /* RealmBenchmarkTests.swift */,
 			);
 			path = SwiftDatabaseBenchmarkTests;
 			sourceTree = "<group>";
@@ -116,16 +128,25 @@
 		7C4A9DA21C96CC850074B032 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				7C4A9DA31C96CCB50074B032 /* Message+CoreDataProperties.swift */,
-				7C4A9DA41C96CCB50074B032 /* Message.swift */,
+				7C2819191C97A63E00F1133D /* Message+CoreDataProperties.swift */,
+				7C28191A1C97A63E00F1133D /* Message.swift */,
 			);
 			name = CoreData;
+			sourceTree = "<group>";
+		};
+		7CBA9AE41C96DD0B00D44808 /* Realm */ = {
+			isa = PBXGroup;
+			children = (
+				7CBA9AE51C96DD2600D44808 /* RLMMessage.swift */,
+			);
+			name = Realm;
 			sourceTree = "<group>";
 		};
 		CD775F083642DC084D8AFC70 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				7B7B85F1EAED584C2CC1FCF1 /* Pods_SwiftDatabaseBenchmark.framework */,
+				164B88A866D94FC0822A522A /* Pods_SwiftDatabaseBenchmarkTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -135,6 +156,8 @@
 			children = (
 				3FFE12134493F368F72D71F9 /* Pods-SwiftDatabaseBenchmark.debug.xcconfig */,
 				7F12DE1833D72974393D8A52 /* Pods-SwiftDatabaseBenchmark.release.xcconfig */,
+				A87DA71AA58BCD7C7CB52DFB /* Pods-SwiftDatabaseBenchmarkTests.debug.xcconfig */,
+				CA20B2624D2EBE6CB323E411 /* Pods-SwiftDatabaseBenchmarkTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -166,9 +189,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7C4A9D9F1C96C9700074B032 /* Build configuration list for PBXNativeTarget "SwiftDatabaseBenchmarkTests" */;
 			buildPhases = (
+				985062217581C040544F0494 /* Check Pods Manifest.lock */,
 				7C4A9D8F1C96C9700074B032 /* Sources */,
 				7C4A9D901C96C9700074B032 /* Frameworks */,
 				7C4A9D911C96C9700074B032 /* Resources */,
+				4A4902D9927BBE396B583E73 /* Embed Pods Frameworks */,
+				9B5A586CD16072CC42C7D80F /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -269,6 +295,51 @@
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDatabaseBenchmark/Pods-SwiftDatabaseBenchmark-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
+		4A4902D9927BBE396B583E73 /* Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDatabaseBenchmarkTests/Pods-SwiftDatabaseBenchmarkTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		985062217581C040544F0494 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9B5A586CD16072CC42C7D80F /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-SwiftDatabaseBenchmarkTests/Pods-SwiftDatabaseBenchmarkTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		DB044E511839C66CD360A7BB /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -293,8 +364,9 @@
 			files = (
 				7C4A9D881C96C9700074B032 /* SwiftDatabaseBenchmark.xcdatamodeld in Sources */,
 				7C4A9D821C96C9700074B032 /* ViewController.swift in Sources */,
-				7C4A9DA71C96CCB50074B032 /* Message.swift in Sources */,
-				7C4A9DA51C96CCB50074B032 /* Message+CoreDataProperties.swift in Sources */,
+				7CBA9AE61C96DD2600D44808 /* RLMMessage.swift in Sources */,
+				7C28191D1C97A63E00F1133D /* Message.swift in Sources */,
+				7C28191B1C97A63E00F1133D /* Message+CoreDataProperties.swift in Sources */,
 				7C4A9D801C96C9700074B032 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,9 +375,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7C4A9DA81C96CCB50074B032 /* Message.swift in Sources */,
-				7C4A9DA61C96CCB50074B032 /* Message+CoreDataProperties.swift in Sources */,
+				7CBA9AE71C96DD2600D44808 /* RLMMessage.swift in Sources */,
 				7C4A9D981C96C9700074B032 /* CoreDataBenchmarkTests.swift in Sources */,
+				7C28191E1C97A63E00F1133D /* Message.swift in Sources */,
+				7C28191C1C97A63E00F1133D /* Message+CoreDataProperties.swift in Sources */,
+				7CC0E57B1C96D9DA003B0F50 /* RealmBenchmarkTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -448,6 +522,7 @@
 		};
 		7C4A9DA01C96C9700074B032 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = A87DA71AA58BCD7C7CB52DFB /* Pods-SwiftDatabaseBenchmarkTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SwiftDatabaseBenchmarkTests/Info.plist;
@@ -460,6 +535,7 @@
 		};
 		7C4A9DA11C96C9700074B032 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA20B2624D2EBE6CB323E411 /* Pods-SwiftDatabaseBenchmarkTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = SwiftDatabaseBenchmarkTests/Info.plist;

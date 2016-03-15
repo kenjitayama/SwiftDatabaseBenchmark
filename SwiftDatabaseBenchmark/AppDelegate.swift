@@ -77,7 +77,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             // Replace this with code to handle the error appropriately.
             // abort() causes the application to generate a crash log and terminate. You should not use this function in a shipping application, although it may be useful during development.
             NSLog("Unresolved error \(wrappedError), \(wrappedError.userInfo)")
-            abort()
+            NSLog("recreating SQLite file")
+//            abort()
+            
+            try! NSFileManager.defaultManager().removeItemAtURL(url)
+            try! coordinator.addPersistentStoreWithType(NSSQLiteStoreType, configuration: nil, URL: url, options: nil)
         }
         
         return coordinator

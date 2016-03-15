@@ -2,7 +2,7 @@
 //  Message.swift
 //  SwiftDatabaseBenchmark
 //
-//  Created by Kenji Tayama on 2016/03/14.
+//  Created by Kenji Tayama on 2016/03/15.
 //  Copyright © 2016年 Kenji Tayama. All rights reserved.
 //
 

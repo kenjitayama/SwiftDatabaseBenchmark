@@ -26,25 +26,14 @@ class CoreDataBenchmarkTests: XCTestCase {
     
     override func tearDown() {
         
-        let context = self.context
-        
-        let request = NSFetchRequest(entityName: "Message")
-        let messages = try! context.executeFetchRequest(request)
-        
-        
-        messages.forEach { message in
-            
-            context.deleteObject(message as! NSManagedObject)
-        }
-        
-        try! context.save()
-        
+        let dbFileURL = self.appDelegate.applicationDocumentsDirectory.URLByAppendingPathComponent("SingleViewCoreData.sqlite")
+        try! NSFileManager.defaultManager().removeItemAtURL(dbFileURL)
         
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
     
-    func testExample() {
+    func testPerformance() {
         // This is an example of a functional test case.
         // Use XCTAssert and related functions to verify your tests produce the correct results.
       
@@ -70,13 +59,6 @@ class CoreDataBenchmarkTests: XCTestCase {
         }
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
-    }
-    
     private let appDelegate: AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
     
     private var context: NSManagedObjectContext {
@@ -90,7 +72,8 @@ class CoreDataBenchmarkTests: XCTestCase {
         }
         
         let date = NSDate(timeIntervalSince1970: timeIntervalSince1970)
-        message.identifier = date
+        message.identifier = NSNumber(longLong: Int64(timeIntervalSince1970))
+        message.identifierDate = date
         message.text = "\(timeIntervalSince1970)"
         message.removed = timeIntervalSince1970 % 2 == 0
     }
